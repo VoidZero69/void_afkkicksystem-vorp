@@ -14,5 +14,5 @@ AddEventHandler('void_doorlocks:notify', function(msg, cb)
     local _source = source
 	local User = VorpCore.getUser(_source)
 	local Character = User.getUsedCharacter
-	TriggerClientEvent("vorp:TipBottom", _source, msg, 2000)
+	TriggerClientEvent("vorp:TipBottom", _source, msg, 5000)
 end)
