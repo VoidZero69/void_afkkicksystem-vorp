@@ -1,14 +1,14 @@
 Citizen.CreateThread(function()
 	while true do
 		Wait(1000)
-		playerPed = GetPlayerPed(-1)
+		playerPed = PlayerPedId()
 		if playerPed then
 			currentPos = GetEntityCoords(playerPed, true)   
 			if currentPos == prevPos then
 				if time > 0 then
 					if Config.notification and time == math.ceil(Config.afktime / 2) then
 						notiftime=math.ceil(time/60)
-						TriggerServerEvent("void_doorlocks:notify", "you will be kicked in "..notiftime.." minutes for being afk.")
+						TriggerEvent("vorp:TipBottom", "you will be kicked in "..notiftime.." minutes for being afk.", 5000)
 					end
 					time = time - 1
 				else
