@@ -8,7 +8,7 @@ Citizen.CreateThread(function()
 				if time > 0 then
 					if Config.notification and time == math.ceil(Config.afktime / 2) then
 						notiftime=math.ceil(time/60)
-						TriggerEvent("vorp:TipBottom", "you will be kicked in "..notiftime.." minutes for being afk.", 5000)
+						TriggerEvent("vorp:Tip", "you will be kicked in "..notiftime.." minutes for being afk.", 5000)
 					end
 					time = time - 1
 				else
