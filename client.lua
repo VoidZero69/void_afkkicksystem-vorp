@@ -2,7 +2,8 @@ Citizen.CreateThread(function()
 	while true do
 		Wait(1000)
 		playerPed = PlayerPedId()
-		if playerPed then
+			local dead = IsEntityDead(PlayerPedId())
+		if playerPed and not dead then
 			currentPos = GetEntityCoords(playerPed, true)   
 			if currentPos == prevPos then
 				if time > 0 then
